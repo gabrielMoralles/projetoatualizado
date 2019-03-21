@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Visual</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit|Roboto" rel="stylesheet">
+    <script src="js/principal.js"></script>
+</head>
+<body data-spy="scroll" data-target="navbar-item" >
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <li class="navbar-toggler-icon active"></li>
+                <a class="navbar-brand" id="title">Doces!</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto" id="navtext">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="https://github.com/gabrielMoralles/betaProjeto">Git betaProject <span class="sr-only">Inicial</span></a>
+                    </li>
+                    <li class="navbar-item active">
+                      <a class="nav-link" href="https://trello.com/b/q1ivU20T/devops-ope">Trello betaProject</a>
+                    </li>   
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquise aqui" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+                  </form>
+                </div>
+              </nav>
+              <body id="body">
+
+              <div class="container">
+              <form action="" class="inputs">
+                        <input type="text" placeholder="Insira a quantidade" class="inputQtd">
+                        <input type="text" placeholder="Insira o produto" class="inputProd" >
+                        <input type="text" placeholder="Insira o preço" class="inputPrec">
+                        <p class="text">Insira a data de fabricação :</p>
+                        <input type="date" placeholder="Insira a data de fab" class="inputFab">
+                        <p class="text">Insira a data de Validade : </p>
+                        <input type="date" placeholder="Insira a data de validade" class="inputVal">
+                        <button type="button" onclick="main()">Atualizar</button>
+
+                </form>
+              <table class="tabela">
+                        <tr>
+                            <th>Quantidade</th>
+                            <th>Nome do Produto</th>
+                            <th>Preço</th>
+                            <th>Data fab.</th>
+                            <th>Validade</th>
+                
+                        </tr>
+                        
+                       
+                </table>
+              </div>
+                   
+                    
+                        
+</body>
+</html>

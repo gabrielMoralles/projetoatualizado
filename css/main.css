@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+html,body{
+    background: url("https://images.pexels.com/photos/1054222/pexels-photo-1054222.jpeg?cs=srgb&dl=background-background-image-clear-sky-1054222.jpg&fm=jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+
+	font-family: sans-serif;
+	font-size: 0.7rem;
+	color: rgb(255,255,255);
+
+
+}
+.inputs{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+
+
+
+}
+
+table {
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+	background-color: rgba(0, 150, 250, 0.11);
+	margin-top: 1rem;
+	
+ }
+ 
+ table, th, td {
+	border: 1px solid black;
+ }
+
+th,td{
+	position: center;
+	padding: 5px;
+
+
+}
+table{
+
+	 align-content: center;
+
+}
+
+.inputs{
+
+	display:flex;	
+	flex-direction:column; 
+	margin: auto;
+	border: 1px solid black;
+	margin-top: 10px;
+	
+}
+
+
+
+.inputQtd,.inputProd,.inputPrec,.inputPrec,.inputFab,.inputVal{
+
+	margin: 2px;
+	
+	
+}
+
+.text{
+
+	padding-top: 5px;
+
+}
+
+.inputProd :focus{
+
+	border-color: yellow;
+
+
+}
+
+button{
+
+	border-radius: 10rem;
+	background-color: rgba(0, 150, 250, 0.11);
+}
+#title{
+	font-family: 'Kanit', sans-serif;
+	
+
+}
+#navtext{
+
+	font-family: 'Roboto', sans-serif;
+}
+
+.container{
+
+	display: flex;
+	flex-direction: row;
+
+
+}

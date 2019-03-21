@@ -1,3 +1,19 @@
+var x=0
+
+function zeraInput(form){
+
+    form.querySelector(".inputQtd").value= ""
+    form.querySelector(".inputProd").value=""
+    form.querySelector(".inputPrec").value =""
+    form.querySelector(".inputFab").value=""
+    form.querySelector(".inputVal").value=""
+
+
+}
+
+
+
+
 
 function geraProduto(form){
 
@@ -6,7 +22,7 @@ function geraProduto(form){
     var selPreco= form.querySelector(".inputPrec").value
     var selDataFab= form.querySelector(".inputFab").value
     var selDataVal= form.querySelector(".inputVal").value
-
+    
     var produto = {
         
         contQtd:form.querySelector(".inputQtd").value,
@@ -21,23 +37,53 @@ function geraProduto(form){
     
     }
 
+    
+
     return produto
 
 }
 
 function geraSituacao(produto){
 
+    var form =  document.querySelector(".inputs")
+    var selQtd= form.querySelector(".inputQtd").value
+    var selNome= form.querySelector(".inputProd").value
+    var selPreco= form.querySelector(".inputPrec").value
+    var selDataFab= form.querySelector(".inputFab").value
+    var selDataVal= form.querySelector(".inputVal").value
 
     console.log(isNaN(produto.contQtd))
+
+
+    if (selQtd == "" || selNome == "" || selPreco == "" || selDataFab == "" || selDataVal =="" ){
+
+
+        alert("algum campo ficou vazio")
+        zeraInput(form)
+        return false
+
+
+
+    } 
+
+
 
     if (isNaN(produto.contQtd)){
 
         alert("Quantidade Invalida!")
+        zeraInput(form)
         return false
 
     }else if(isNaN(produto.contPreco)){
-
+       
         alert("Preco Invalido!")
+        zeraInput(form)
+        return false
+
+    }else if (selDataFab > selDataVal){
+
+        alert("Datas invalidas")
+        zeraInput(form)
         return false
 
     }else{
@@ -48,18 +94,24 @@ function geraSituacao(produto){
 
 }
 
-function criaElementos(){
+function criaElementos(img){
 
     var tabela=document.querySelector(".tabela")
     var tr=document.createElement("tr")
-
     var qtdTd= document.createElement("td")
+    qtdTd.setAttribute("class", ("qtdTd"+x))
+    
+
     var nomeTd= document.createElement("td")
     var precoTd= document.createElement("td")
     var fabTd= document.createElement("td")
     var valTd= document.createElement("td")
+ 
+   
 
-    return appendaElementos(tabela,tr,qtdTd,nomeTd,precoTd,fabTd,valTd)
+    
+
+    return appendaElementos(tabela,tr,qtdTd,nomeTd,precoTd,fabTd,valTd,img)
 
     }
 
@@ -73,7 +125,8 @@ function appendaElementos(tabela,tr,qtd,nome,preco,fab,val){
         trNome : tr.appendChild(nome),
         trPreco : tr.appendChild(preco),
         trFab : tr.appendChild(fab),
-        trVal : tr.appendChild(val)
+        trVal : tr.appendChild(val),
+        
     }
 
 return tabelaTr
@@ -87,20 +140,41 @@ function appendaProduto(produto,tabela){
     tabela.trPreco.appendChild(produto.preco)
     tabela.trFab.appendChild(produto.dataFab)
     tabela.trVal.appendChild(produto.dataVal)
+    
+   
 
 }
 
 function main(){
 
-    var form =  document.querySelector(".inputs")
-    var produto= geraProduto(form)
-
-    if (geraSituacao(produto)){
-
-        appendaProduto(produto,criaElementos())  
-
+    var img = new Image();
+    img.setAttribute("class",(""+x))
+    img.src = 'lixo.png';
+    img.onclick = function() {
+    
+        tabela.deleteRow();
+        x=x-1
     }
 
+    var form =  document.querySelector(".inputs")
+    var produto= geraProduto(form)
+  
+    
+    if (geraSituacao(produto)){
+
+
+        x= x+1
+        appendaProduto(produto,criaElementos())  
+        zeraInput(form)
+
+    }else{
+
+        zeraInput(form)
+    }
+    console.log(x)
+
+
+    
 }
 
 

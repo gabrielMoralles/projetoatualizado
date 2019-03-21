@@ -105,3 +105,11 @@ button{
 
 
 }
+
+img{
+	border-top:1px solid black; 
+	padding-top:2px;
+	width: 20px; 
+	height:20px;
+
+}

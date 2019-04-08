@@ -70,6 +70,14 @@ table{
 	
 }
 
+.tTitulo{
+
+
+	background-color: rgba(9, 157, 255, 0.644)
+
+}
+
+
 .text{
 
 	padding-top: 5px;
@@ -112,4 +120,14 @@ img{
 	width: 20px; 
 	height:20px;
 
+}
+
+.fade-out { 
+	transition: 2s; 
+ 	opacity: 0; }
+
+
+td:hover{
+	
+	cursor: pointer;
 }

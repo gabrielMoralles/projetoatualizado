@@ -1,3 +1,5 @@
+
+ $().keypress("")
 var x=0
 
 function zeraInput(form){
@@ -101,6 +103,8 @@ function criaElementos(img){
     var qtdTd= document.createElement("td")
     qtdTd.setAttribute("class", ("qtdTd"+x))
     
+    
+    
 
     var nomeTd= document.createElement("td")
     var precoTd= document.createElement("td")
@@ -117,10 +121,13 @@ function criaElementos(img){
 
 function appendaElementos(tabela,tr,qtd,nome,preco,fab,val){
 
+  
 
     tabela.appendChild(tr)
 
     var tabelaTr ={
+
+
         trQtd : tr.appendChild(qtd),
         trNome : tr.appendChild(nome),
         trPreco : tr.appendChild(preco),
@@ -145,17 +152,15 @@ function appendaProduto(produto,tabela){
 
 }
 
+
+
+
 function main(){
 
-    var img = new Image();
-    img.setAttribute("class",(""+x))
-    img.src = 'lixo.png';
-    img.onclick = function() {
-    
-        tabela.deleteRow();
-        x=x-1
-    }
 
+    
+    
+    
     var form =  document.querySelector(".inputs")
     var produto= geraProduto(form)
   
@@ -166,6 +171,22 @@ function main(){
         x= x+1
         appendaProduto(produto,criaElementos())  
         zeraInput(form)
+        $("td").on("dblclick",function(){
+            var pai= this.parentNode;
+            console.log("fui clickado")
+            pai.classList.add("fade-out");
+            setInterval(function(){
+
+                pai.remove();
+
+
+            },1000)
+
+
+        
+        
+        
+        })
 
     }else{
 

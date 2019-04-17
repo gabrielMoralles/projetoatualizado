@@ -14,9 +14,6 @@ function zeraInput(form){
 }
 
 
-
-
-
 function geraProduto(form){
 
     var selQtd= form.querySelector(".inputQtd").value

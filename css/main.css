@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+
+.bg-img{
+
+	
+
+
+}
+
+
 html,body{
-    background: url("https://images.pexels.com/photos/1054222/pexels-photo-1054222.jpeg?cs=srgb&dl=background-background-image-clear-sky-1054222.jpg&fm=jpg");
+	
+	background-image:url("https://cdn.wallpapersafari.com/28/18/kgXInH.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -20,6 +31,8 @@ h1 {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: rgb(248, 85, 85);
+	border-radius: 5px;
 	
 
 
@@ -27,10 +40,11 @@ h1 {
 }
 
 table {
+	font-family: 'ABeeZee', sans-serif;
 	margin: auto;
 	width: 50%;
 	padding: 10px;
-	background-color: rgba(0, 150, 250, 0.11);
+	background-color: rgba(250, 246, 0, 0.863);
 	margin-top: 1rem;
 	
  }
@@ -52,7 +66,7 @@ table{
 }
 
 .inputs{
-
+	font-family: 'ABeeZee', sans-serif;
 	display:flex;	
 	flex-direction:column; 
 	margin: auto;
@@ -73,7 +87,7 @@ table{
 .tTitulo{
 
 
-	background-color: rgba(9, 157, 255, 0.644)
+	background-color: rgb(248, 85, 85);
 
 }
 
@@ -91,7 +105,7 @@ table{
 
 }
 
-button{
+.inputs button{
 
 	border-radius: 10rem;
 	background-color: rgba(0, 150, 250, 0.11);
@@ -130,4 +144,44 @@ img{
 td:hover{
 	
 	cursor: pointer;
+}
+
+.divFilha{
+
+
+	display: flex;
+	box-sizing: border-box;
+	flex-direction: column;
+	font-size: 7px;
+
+}
+
+
+.divMae{
+	max-width: inherit;
+	display: flex;
+	flex-direction: row;
+
+
+}
+.inputEdit{
+
+	max-width: 50%;
+
+}
+
+td{
+	max-width: 100px;
+	box-sizing: border-box;
+
+}
+.divFilha button{
+
+	padding: 0%;
+
+}
+input{
+
+
+	border-radius: 5px;
 }

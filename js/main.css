@@ -1,0 +1,16 @@
+.jorge{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.inputbotao{
+    padding: 0px;
+    font-size: 0.5px;
+    display: flex;
+    flex-direction: column;
+    max-width:2px ;
+    max-height: 2px;
+
+}

@@ -149,7 +149,31 @@ function appendaProduto(produto,tabela){
 
 }
 
+function createDiv(td){
 
+
+    console.log(td)
+    var divMae=document.createElement("div")
+    divMae.classList.add("divMae")
+    var input=document.createElement("input")
+    input.classList.add("inputEdit")
+    divMae.appendChild(input)
+    var divFilha=document.createElement("div")
+    divFilha.classList.add("divFilha")
+    var botaoX=document.createElement("button")
+    var botaoO=document.createElement("button")
+   
+    
+    $(botaoX).text("X")
+    $(botaoO).text("O")
+    divMae.appendChild(divFilha)
+    divFilha.appendChild(botaoX)
+    divFilha.appendChild(botaoO)   
+    
+    td.appendChild(divMae)
+           
+
+}
 
 
 function main(){
@@ -168,21 +192,13 @@ function main(){
         x= x+1
         appendaProduto(produto,criaElementos())  
         zeraInput(form)
-        $("td").on("dblclick",function(){
-            var pai= this.parentNode;
-            console.log("fui clickado")
-            pai.classList.add("fade-out");
-            setInterval(function(){
-
-                pai.remove();
+        $("td").one("dblclick",function(){
 
 
-            },1000)
+            eleMesmo=this
+            createDiv(eleMesmo)
 
 
-        
-        
-        
         })
 
     }else{

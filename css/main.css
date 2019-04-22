@@ -11,7 +11,7 @@
 
 html,body{
 	
-	background-image:url("https://cdn.wallpapersafari.com/28/18/kgXInH.png");
+	background-color: rgba(248, 85, 85, 0.082);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -42,9 +42,9 @@ h1 {
 table {
 	font-family: 'ABeeZee', sans-serif;
 	margin: auto;
-	width: 50%;
+	width: 55%;
 	padding: 10px;
-	background-color: rgba(250, 246, 0, 0.863);
+	background-color: rgba(248, 85, 85, 0.582);
 	margin-top: 1rem;
 	
  }
@@ -130,9 +130,12 @@ table{
 
 img{
 	border-top:1px solid black; 
-	padding-top:2px;
+
 	width: 20px; 
 	height:20px;
+
+
+
 
 }
 

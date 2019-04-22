@@ -93,20 +93,26 @@ function geraSituacao(produto){
 
 }
 
-function criaElementos(img){
+function criaElementos(){
 
-    var tabela=document.querySelector(".tabela")
-    var tr=document.createElement("tr")
-    var qtdTd= document.createElement("td")
-    qtdTd.setAttribute("class", ("qtdTd"+x))
-    
-    
+    var tabela=document.querySelector(".tabela");
+    var tr=document.createElement("tr");
+    var qtdTd= document.createElement("td");
+ 
+    var img=document.createElement("img");
+        $(img).attr("src","lixo.png");
+        $( img ).click(function() {
+            $( this.parentNode ).fadeOut( "slow", function() {
+              // After animation completed:
+              $( this ).remove();
+            });
+          });
     
 
-    var nomeTd= document.createElement("td")
-    var precoTd= document.createElement("td")
-    var fabTd= document.createElement("td")
-    var valTd= document.createElement("td")
+    var nomeTd= document.createElement("td");
+    var precoTd= document.createElement("td");
+    var fabTd= document.createElement("td");
+    var valTd= document.createElement("td");
  
    
 
@@ -116,7 +122,7 @@ function criaElementos(img){
 
     }
 
-function appendaElementos(tabela,tr,qtd,nome,preco,fab,val){
+function appendaElementos(tabela,tr,qtd,nome,preco,fab,val,img){
 
   
 
@@ -130,6 +136,7 @@ function appendaElementos(tabela,tr,qtd,nome,preco,fab,val){
         trPreco : tr.appendChild(preco),
         trFab : tr.appendChild(fab),
         trVal : tr.appendChild(val),
+        trImg : tr.appendChild(img)
         
     }
 
@@ -171,6 +178,17 @@ function createDiv(td){
     divFilha.appendChild(botaoO)   
     
     td.appendChild(divMae)
+
+
+    $(botaoX).on("click",function(){
+
+        var pai= this.parentNode
+        pai.parentNode.remove()
+
+
+    })
+
+
            
 
 }
@@ -192,7 +210,7 @@ function main(){
         x= x+1
         appendaProduto(produto,criaElementos())  
         zeraInput(form)
-        $("td").one("dblclick",function(){
+        $("td").on("dblclick",function(){
 
 
             eleMesmo=this
